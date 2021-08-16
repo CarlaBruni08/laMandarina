@@ -1,0 +1,19 @@
+.quienesSomos{
+    background-image: url("../img/quienesSomos.jpg");
+}
+
+.quienesSomos__parrafo{ 
+        color: $colorNegro;
+        line-height: 4rem;
+        letter-spacing: 2rem;
+        font-size: 4rem;
+        font-family: $fontFamilyDefecto;
+        text-align: center;
+        padding-top: 21rem;
+        overflow: hidden;
+}
+
+.quienesSomos__parrafo--mayuscula{
+    @extend.quienesSomos__parrafo;
+    text-transform: uppercase;
+}

@@ -1,0 +1,87 @@
+.galeria-container{
+    margin: 10px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 33% 33% 33%;     
+}
+
+.galeria-container--principal{
+    @extend.galeria-container;
+    grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemGrande3";
+}
+
+.galeria-container--112{
+    @extend.galeria-container;
+    grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemChico1"
+                        "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemChico2";
+}
+
+.galeria-container--211{
+    @extend.galeria-container;
+    grid-template-areas: "galeria-container__itemChico1 galeria-container__itemGrande1 galeria-container__itemGrande2"
+                        "galeria-container__itemChico2 galeria-container__itemGrande1 galeria-container__itemGrande2";
+          
+}
+
+.galeria-container--121{
+    @extend.galeria-container;
+    grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemChico1 galeria-container__itemGrande2"
+                        "galeria-container__itemGrande1 galeria-container__itemChico2 galeria-container__itemGrande2";
+          
+}
+
+$items:(
+    galeria-container__itemGrande3:galeria-container__itemGrande3,
+    galeria-container__itemGrande2:galeria-container__itemGrande2,
+    galeria-container__itemGrande1:galeria-container__itemGrande1,
+    galeria-container__itemChico1:galeria-container__itemChico1,
+    galeria-container__itemChico2:galeria-container__itemChico2
+);
+
+@each $clave,$valor in $items{
+    .#{$clave}{
+        grid-area:#{$valor};
+    }
+}
+
+.galeria-container__img{
+    border-radius: 25% 10%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.contenidoGaleria{
+    height: 860px;
+    text-align: center;
+    border-radius: 25% 10%;
+    
+    a{
+        text-decoration: none;
+        color: $colorNegro;
+    }
+
+    @for $i from 3 through 5 {
+        h#{$i}{margin-top: 50%;
+            font-size:$i*1.5rem;
+            font-family: fontFamilyDefecto;
+            color:papayawhip}
+    }
+}
+
+.contenidoGaleria--amarillo{
+    @extend.contenidoGaleria;
+    background-color: $colorNegro;
+}
+
+.contenidoGaleria--rojo{
+    @extend.contenidoGaleria;
+    background-color: #c0c0c0;
+}
+
+.contenidoGaleria--naranja{
+    @extend.contenidoGaleria;
+    background-color: $colorNaranja;
+}

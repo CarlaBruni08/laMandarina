@@ -1,0 +1,101 @@
+$colorNaranja:#fb8b04;
+$colorRojo:#e90e0e;
+$colorAmarillo:#f8ea26;
+$fontFamilyDefecto:'Barlow', sans-serif;
+$colorNegro:#040404;
+
+@import "galeria";
+@import "contacto";
+@import "index";
+@import "quienesSomos";
+@import "footer";
+
+
+.tracking-in-expand{-webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both}
+ @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+ @keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+ .tracking-in-expand{animation:tracking-in-expand 3s cubic-bezier(.215,.61,.355,1.000) both}
+
+small{
+    font-family: $fontFamilyDefecto;
+    background-color: $colorNaranja;
+    font-size: 1.875em;
+}
+
+h1{
+    font-family: $fontFamilyDefecto;
+    background-color: $colorNegro;
+    color: #c0c0c0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.imagenFondo{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contenedor{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px){  
+
+    p{
+        letter-spacing: 0rem!important;
+        font-size: 1.8rem!important;
+        padding-top: 10rem!important;
+    }
+
+    .contenidoGaleria{
+        height: 140px;
+     @for $i from 3 through 5 {
+            h#{$i}{margin-top: 50%;
+                font-size:$i*0.2rem;}
+        }
+    }
+    
+
+    .tracking-in-expand{
+        animation: none!important;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    p{
+        font-size: 1.8rem!important;
+        padding-top: 6rem!important;
+    }    
+    
+    .contenidoGaleria{
+        height: 250px;
+     @for $i from 3 through 5 {
+            h#{$i}{margin-top: 50%;
+                font-size:$i*0.5rem;}
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+    p{
+        font-size: 2.8rem!important;
+        padding-top: 6rem!important;
+        
+    }    
+        
+    .contenidoGaleria{
+        height: 340px;
+     @for $i from 3 through 5 {
+            h#{$i}{margin-top: 50%;
+                font-size:$i*0.5rem;}
+        }
+    }
+}
