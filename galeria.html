@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <!-- NAVEGADOR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#"></a>
@@ -48,17 +49,21 @@
             </div>
         </div>
     </nav>
+    <!-- FIN NAVEGADOR-->
+    <!-- PANTALLA PRINCIPAL-->
     <div class="contenedor">
         <a href="#principal"><button type="button" class="btn btn-secondary btn-lg"
                 style="position: fixed; bottom: 0px; right: 0px;">ARRIBA</button></a>
         <section>
+            <!-- DISEÑADO CON GRID AREA-->
+            <!-- GRID DE 3 COLUMNAS DEL MISMO TAMAÑO-->
             <div id="principal" class="galeria-container--principal">
-                <div class="galeria-container__itemGrande1 contenidoGaleria--amarillo">
+                <div class="galeria-container__itemGrande1 contenidoGaleria--negro">
                     <div class="tracking-in-expand"><a href="#grid1">
                             <h3>OUTSIDE</h3>
                         </a></div>
                 </div>
-                <div class="galeria-container__itemGrande2 contenidoGaleria--rojo">
+                <div class="galeria-container__itemGrande2 contenidoGaleria--gris">
                     <div class="tracking-in-expand"><a href=#grid2>
                             <h4>INSIDE</h4>
                         </a></div>
@@ -70,6 +75,7 @@
                 </div>
             </div>
             <div style="height: 2rem;"></div>
+            <!-- GRID DE 3 COLUMNAS DEL MISMO TAMAÑO, DE LAS CUALES DOS COLUMNAS TIENEN UNA FOTO, Y LA ULTIMA DOS FOTOS-->
             <div id="grid1" class="galeria-container--112">
                 <div class="galeria-container__itemGrande1"><img src="./img/img3.jpg" class="galeria-container__img"
                         alt="doors"></div>
@@ -81,6 +87,7 @@
                         alt="speaker"></div>
             </div>
             <div style="height: 2rem;"></div>
+            <!-- GRID DE 3 COLUMNAS DEL MISMO TAMAÑO, DE LAS CUALES LAS ULTIMAS DOS COLUMNAS TIENEN UNA FOTO RESPECTIVAMENTE, Y LA PRIMER COLUMNA DOS FOTOS-->
             <div id="grid2" class="galeria-container--211">
                 <div class="galeria-container__itemGrande1"><img src="./img/img5.jpg" class="galeria-container__img"
                         alt="stairs"></div>
@@ -92,6 +99,7 @@
                         alt="hanger"></div>
             </div>
             <div style="height: 2rem;"></div>
+            <!-- GRID DE 3 COLUMNAS DEL MISMO TAMAÑO, DE LAS CUALES LA PRIMER Y ULTIMA COLUMNA TIENE UNA FOTO, Y LA COLUMNA DEL MEDIO DOS FOTOS-->
             <div id="grid3" class="galeria-container--121">
                 <div class="galeria-container__itemGrande1"><img src="./img/img10.jpg" class="galeria-container__img"
                         alt="rubberDucks"></div>
@@ -104,16 +112,15 @@
             </div>
         </section>
     </div>
-    <!---- se supone que esto seria una galeria ---->
+    <!-- FIN PANTALLA PRINCIPAL-->
+    <!-- FOOTER-->
     <section class="footer">
         <div class="text-center p-3 bg-dark footer__contenedor">
             © 2020 Copyright:
             <a class="text-white" href="LaMandarina.com.ar">LaMandarina.com.ar</a>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <!-- FIN FOOTER-->
 </body>
 
 </html>

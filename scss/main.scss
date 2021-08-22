@@ -9,6 +9,7 @@ $colorNegro:#040404;
 @import "index";
 @import "quienesSomos";
 @import "footer";
+@import "contratanos";
 
 
 .tracking-in-expand{-webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both}
@@ -30,7 +31,7 @@ h1{
     text-align: center;
 }
 
-
+/*CADA SECTION DEBE TENER ESTA CLASE QUE DEFINE EL TAMAÑO DEL MISMO*/
 .imagenFondo{
     height: 100vh;
     background-size: cover;
@@ -38,6 +39,7 @@ h1{
     background-repeat: no-repeat;
 }
 
+/* CONTENEDOR PRINCIPAL, CADA PAGINA QUE SE CREA DEBE TENER ESTE ESTILO EN SU DIV*/
 .contenedor{
     display:flex;
     flex-direction: column;
@@ -46,6 +48,7 @@ h1{
     overflow: hidden;
 }
 
+/*CELULARES*/
 @media only screen and (max-width: 768px){  
 
     p{
@@ -69,6 +72,7 @@ h1{
 
 }
 
+/*TABLES,NOTEBOOKS,MONITORES*/
 @media only screen and (min-width: 769px) and (max-width: 1024px){
     p{
         font-size: 1.8rem!important;
@@ -88,7 +92,6 @@ h1{
     p{
         font-size: 2.8rem!important;
         padding-top: 6rem!important;
-        
     }    
         
     .contenidoGaleria{
