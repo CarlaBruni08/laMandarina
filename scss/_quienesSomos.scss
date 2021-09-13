@@ -1,5 +1,25 @@
+.gradiente{
+    font-family: $fontFamilyDefecto;
+    background: rgb(33,37,41);
+    background: linear-gradient(90deg, rgba(33,37,41,1) 0%, rgba(251,139,4,1) 28%, rgba(33,37,41,1) 100%);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+h3{
+    font-family: $fontFamilyDefecto;
+    color: $colorNaranja;
+    font-size: 1.875em;
+}
+
+p{
+    font-family: $fontFamilyDefecto;
+    color: $colorNaranja;
+    font-size: 1.875em;
+}
 .quienesSomos{
-    background-image: url("../img/quienesSomos.jpg");
+    /*background-image: url("../img/quienesSomos.jpg");*/
+    background-color: $colorNaranja;
 }
 
 .quienesSomos__parrafo{ 
@@ -9,11 +29,41 @@
         font-size: 4rem;
         font-family: $fontFamilyDefecto;
         text-align: center;
-        padding-top: 21rem;
         overflow: hidden;
 }
 
 .quienesSomos__parrafo--mayuscula{
     @extend.quienesSomos__parrafo;
     text-transform: uppercase;
+}
+
+.quienesSomos a{
+    color: $colorNegro;
+}
+
+.integrantes--principal{
+    background-color: #212529;
+}
+
+.integrantes-padre{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+.integrante-hijo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.integrante-hijo img{
+    border-radius: 50%;
+    max-width: 300px;
+}
+
+.fondo{
+    background-color:#212529;
 }
