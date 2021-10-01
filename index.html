@@ -30,7 +30,6 @@
     crossorigin="anonymous"></script>
   <title>La Mandarina Servicio de Fotografía</title>
 </head>
-
 <body>
   <!-- NAVEGADOR-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -43,19 +42,20 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav align-items-center">
+        <ul class="navbar-nav align-items-center" id="ulNavegador">
           <li class="nav-item">
             <a class="nav-link" href="./quienesSomos.html">¿Quiénes somos?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./galeria.html">Fotografía</a>
+            <a class="nav-link" href="./galeria.html" id="foto">Fotografía</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contratanos.html">Contratanos!</a>
+            <a class="nav-link" href="./contratanos.html" id="contratanos">Contratanos!</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./contacto.html">Contacto</a>
           </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -91,4 +91,5 @@
   </section>
   <!-- FIN FOOTER-->
 </body>
+<script src="./js/index.js"></script>
 </html>
