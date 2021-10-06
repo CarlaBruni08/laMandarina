@@ -8,10 +8,10 @@
   grid-row-gap: 10px;
   grid-template-columns: 33% 33% 33%; }
 
-/*CONFIGURACION DE LA DISPOSICION DE LAS FOTOS EN LA GALERIA*/
 .galeria-container--principal {
   grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemGrande3"; }
 
+/*CONFIGURACION DE LA DISPOSICION DE LAS FOTOS EN LA GALERIA*/
 .galeria-container--112 {
   grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemChico1" "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemChico2"; }
 
@@ -20,6 +20,9 @@
 
 .galeria-container--121 {
   grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemChico1 galeria-container__itemGrande2" "galeria-container__itemGrande1 galeria-container__itemChico2 galeria-container__itemGrande2"; }
+
+.galeria-container__itemGrande4 {
+  grid-area: galeria-container__itemGrande4; }
 
 .galeria-container__itemGrande3 {
   grid-area: galeria-container__itemGrande3; }
@@ -150,6 +153,17 @@ p {
 
 .tituloModal {
   width: 100%; }
+
+.contratanos-container, .contratanos-container--principal {
+  margin: 10px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: 25% 25% 25%; }
+
+.contratanos-container--principal {
+  grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemGrande3 galeria-container__itemGrande4"; }
 
 .tracking-in-expand {
   -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;

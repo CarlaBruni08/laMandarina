@@ -8,12 +8,12 @@
     grid-template-columns: 33% 33% 33%;     
 }
 
-/*CONFIGURACION DE LA DISPOSICION DE LAS FOTOS EN LA GALERIA*/
 .galeria-container--principal{
     @extend.galeria-container;
     grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemGrande3";
 }
 
+/*CONFIGURACION DE LA DISPOSICION DE LAS FOTOS EN LA GALERIA*/
 .galeria-container--112{
     @extend.galeria-container;
     grid-template-areas: "galeria-container__itemGrande1 galeria-container__itemGrande2 galeria-container__itemChico1"
@@ -35,6 +35,7 @@
 }
 
 $items:(
+    galeria-container__itemGrande4:galeria-container__itemGrande4,
     galeria-container__itemGrande3:galeria-container__itemGrande3,
     galeria-container__itemGrande2:galeria-container__itemGrande2,
     galeria-container__itemGrande1:galeria-container__itemGrande1,
