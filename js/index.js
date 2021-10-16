@@ -32,3 +32,52 @@ for(const clase of clasess){
     clase.parentNode.parentNode.removeChild(clase.parentNode);
 }*/
 
+$("li.nav-item").on("mouseover",function(){
+    $(this).fadeOut("slow",function(){
+        $(this).fadeIn("slow");
+    });
+    /*$(this).slideUp("slow",function(){
+        $(this).slideDown("slow");
+    });*/    
+});
+
+$("#tituloMandarina").on("change",animar());
+$("#tituloMandarina").trigger("change")
+function animar(){
+    $("#tituloMandarina").animate({opacity:'0.2'}, //1er parámetro propiedades
+    "slow",            //2do parámetro duración 
+    function(){        //3er parámetro callback
+        console.log("final de animación");
+        $(this).animate({opacity:'0.9'}, //1er parámetro propiedades
+        "slow",function(){
+            animar();
+        });
+    });
+}
+
+/*$("body").append(`<div>
+                        <a id="irAContacto">Ir a contacto</a>
+                        <p style="height: 800px"></p>
+                        <section id="seccionContacto">
+                           <h4>¡Somos Coders!</h4>
+                        </section>
+                        <a id="IrArriba">Prueba</a>
+                   </div>`);
+// Asociamos la animación al click en un elemento <a>
+$('#irAContacto').click( function(e) { 
+    e.preventDefault();
+    //Animamos sus propiedades CSS con animate
+    $('html, body').animate({
+        scrollTop: $("#seccionContacto").offset().top  
+    }, 2000);
+} );
+
+$("#IrArriba").click( function(e) { 
+    e.preventDefault();
+    //Animamos sus propiedades CSS con animate
+    $('html, body').animate({
+        scrollTop: $("#tituloMandarina").offset().top  
+    }, 2000);
+} );*/
+
+

@@ -18,7 +18,7 @@ function pedirDato(texto, clave) {
 
 function calcularPedido() {
     let precioFinal = 0;
-    for (var i = 0; i < sessionStorage.length; i++) {
+    for (let i = 0; i < sessionStorage.length; i++) {
         let clave = sessionStorage.key(i);
         let valor = sessionStorage[clave];
         switch (clave) {
@@ -48,13 +48,6 @@ function calcularPedido() {
 }
 
 function armarModal(){
-    /*<h3>$37.000</h3>
-    <p>8 Flyers para redes sociales.</p>
-    <p>20 Fotos para tu página web.</p>
-    <p>10 Retoques FX de las fotos que vos elijas.</p>
-    <p>6 Videos animados realizados en After Effects para tus historias.</p>
-    <p>4 Videos animados realizados en After Effects para tus reels.</p>
-    <p>Asesoramiento integral para el diseño de tu página web.</p>*/
     let modalpack4 = $("#modalPack4");
     let modalpack4Body = document.getElementById("modalPack4Body");
     let precio = document.createElement("h3");
