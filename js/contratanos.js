@@ -49,22 +49,22 @@ function calcularPedido() {
 
 function armarModal(){
     let modalpack4 = $("#modalPack4");
-    let modalpack4Body = document.getElementById("modalPack4Body");
+    //let modalpack4Body = document.getElementById("modalPack4Body");
+    
     let precio = document.createElement("h3");
     precio.textContent = "$"+calcularPedido();
-    modalpack4Body.textContent = '';
-
-    modalpack4Body.appendChild(precio);    
-    agregarAlBody(modalpack4Body,sessionStorage['flyers'],"Flyers para redes sociales.");
-    agregarAlBody(modalpack4Body,sessionStorage['fotos'],"Fotos para tu página web.");
-    agregarAlBody(modalpack4Body,sessionStorage['retoquesfx'],"Retoques FX de las fotos que vos elijas.");
-    agregarAlBody(modalpack4Body,sessionStorage['videos'],"Videos animados realizados en After Effects para tus historias.");
-    agregarAlBody(modalpack4Body,sessionStorage['videosEfectos'],"Videos animados realizados en After Effects para tus reels.");
+    $("#modalPack4Body").html('');
+    $("#modalPack4Body").append(precio);
+    agregarAlBody(sessionStorage['flyers'],"Flyers para redes sociales.");
+    agregarAlBody(sessionStorage['fotos'],"Fotos para tu página web.");
+    agregarAlBody(sessionStorage['retoquesfx'],"Retoques FX de las fotos que vos elijas.");
+    agregarAlBody(sessionStorage['videos'],"Videos animados realizados en After Effects para tus historias.");
+    agregarAlBody(sessionStorage['videosEfectos'],"Videos animados realizados en After Effects para tus reels.");
     modalpack4.modal("show");
 }
 
-function agregarAlBody(modalBody,valor,texto){
+function agregarAlBody(valor,texto){
     let p = document.createElement("p");
     p.textContent = valor + " " + texto;
-    modalBody.appendChild(p);
+    $("#modalPack4Body").append(p);
 }
