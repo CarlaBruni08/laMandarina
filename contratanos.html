@@ -25,16 +25,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-        <script src="./js/contratanos.js"></script>
+    <script src="./js/contratanos.js"></script>
     <title>Contratanos</title>
-    
+
 </head>
 
 <body>
     <!-- NAVEGADOR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container containerMandarina">
-            <a class="nav-link logo" id="logo" href="./index.html" tabindex="-1" aria-disabled="true"><img id="imagen" src="./img/logo.png"></img></a>
+            <a class="nav-link logo" id="logo" href="./index.html" tabindex="-1" aria-disabled="true"><img id="imagen"
+                    src="./img/logo.png"></img></a>
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">La Mandarina</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +84,7 @@
                         <div class="tracking-in-expand"> <a style="cursor: pointer;" onclick="armarPedido()">
                                 <h4>Arma tu Pack</h4>
                             </a></div>
-                    </div>                    
+                    </div>
                 </div>
                 <!-- MODAL PACK 1-->
                 <div class="modal modalContratanos" id="modalPack1">
@@ -153,12 +154,12 @@
                             <!-- Modal body -->
                             <div class="modal-body">
                                 <h3>$37.000</h3>
-                                 <p>8 Flyers para redes sociales.</p>
-                                 <p>20 Fotos para tu página web.</p>
-                                 <p>10 Retoques FX de las fotos que vos elijas.</p>
-                                 <p>6 Videos animados realizados en After Effects para tus historias.</p>
-                                 <p>4 Videos animados realizados en After Effects para tus reels.</p>
-                                 <p>Asesoramiento integral para el diseño de tu página web.</p>
+                                <p>8 Flyers para redes sociales.</p>
+                                <p>20 Fotos para tu página web.</p>
+                                <p>10 Retoques FX de las fotos que vos elijas.</p>
+                                <p>6 Videos animados realizados en After Effects para tus historias.</p>
+                                <p>4 Videos animados realizados en After Effects para tus reels.</p>
+                                <p>Asesoramiento integral para el diseño de tu página web.</p>
                             </div>
 
                             <!-- Modal footer -->
@@ -170,7 +171,76 @@
                     </div>
                 </div>
                 <!-- FIN MODAL PACK 1-->
+                <!--MODAL PEDIDO-->
+                <div class="modal modalContratanos" id="modalPedido">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h1 class="modal-title tituloModal">Arma Tu Pack</h1>
+                            </div>
 
+                            <!-- Modal body -->
+                            <div class="modal-body" id="modalPedidoBody">
+                                <center>
+                                    <div class=row>
+                                        <div class="col-md-5">
+                                            <label>Ingrese Cantidad Flyers</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" id="flyers">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class=row>
+                                        <div class="col-md-5">
+                                            <label>Ingrese Cantidad Fotos </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" id="fotos">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class=row>
+                                        <div class="col-md-5">
+                                            <label>Ingrese Cantidad RetoquesFX </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" id="retoquesfx">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class=row>
+                                        <div class="col-md-5">
+                                            <label>Ingrese Cantidad Videos Animados </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" id="videos">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class=row>
+                                        <div class="col-md-5">
+                                            <label>Ingrese Cantidad Videos con Efectos </label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="text" id="videosEfectos">
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" onclick="$('#modalPedido').modal('hide')"
+                                data-dismiss="modal">Close</button>                                
+                                <button type="button" class="btn btn-danger" onclick="generarPedido()"
+                                    data-dismiss="modal">Calcular Pack</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--FIN MODAL PEDIDO-->
                 <!-- FIN MODAL PACK 4-->
                 <div class="modal modalContratanos" id="modalPack4">
                     <div class="modal-dialog modal-dialog-scrollable">
@@ -183,17 +253,18 @@
 
                             <!-- Modal body -->
                             <div class="modal-body" id="modalPack4Body">
-                                
+
                             </div>
                             <!-- Modal footer -->
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger"  onclick="$('#modalPack4').modal('hide')" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger" onclick="$('#modalPack4').modal('hide')"
+                                    data-dismiss="modal">Close</button>
                             </div>
 
                         </div>
                     </div>
                 </div>
-                <!-- FIN MODAL PACK 1-->                
+                <!-- FIN MODAL PACK 1-->
             </section>
         </div>
     </div>
@@ -205,8 +276,8 @@
             <a class="text-white" href="./index.html"">LaMandarina.com.ar</a>
         </div>
     </section>
-    <script src="./js/mandarina.js"></script>
-    <!-- FIN FOOTER-->
+    <script src=" ./js/mandarina.js"></script>
+                <!-- FIN FOOTER-->
 </body>
 
 </html>
