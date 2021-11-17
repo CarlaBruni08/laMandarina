@@ -1,3 +1,4 @@
+/*Animacion sobre el Logo de la Empresa*/ 
 let logo = document.getElementById("logo");
 logo.addEventListener("mouseover",agrandar);
 logo.addEventListener("mouseout",volverAtras);

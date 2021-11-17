@@ -1,3 +1,6 @@
+/*Inicializo Modal Pack
+Seteo todos los valores vacios
+*/ 
 function armarPedido(){
     $("input").each(function(){
         $(this).val(null);
@@ -6,6 +9,7 @@ function armarPedido(){
     modalPedido.modal("show");
 }
 
+/*Valido y Confirmo que los Datos estan correctos y listos para armar el Pedido*/ 
 function validarPedido(){
     if(validarDatos() == true){
         if(window.confirm("confirme que desea enviar el pedido?")){
@@ -13,7 +17,7 @@ function validarPedido(){
         }
     }
 }
-
+/*Valido que los Datos esten completos y sean Numericos*/ 
 function validarDatos(){
     $("#alertaPack").hide();
     let resultado = true;
@@ -39,6 +43,9 @@ function validarDatos(){
     return resultado;
 }
 
+/*Una vez confirmado por el usuario guardo en el Session Storage los datos del Pedido
+y Armo el Modal que contiene el calculo del nuevo presupuesto
+*/ 
 function generarPedido(){
     let modalPedido = $("#modalPedido");
     modalPedido.modal("hide");
@@ -50,15 +57,7 @@ function generarPedido(){
     armarModal();
 }
 
-function pedirDato(texto, clave) {
-    let valor = "";
-    while (valor == "") {
-        valor = prompt(texto);
-    }
-    sessionStorage.setItem(clave, valor);
-
-}
-
+/*Calculo el Presupuesto del Pedido*/ 
 function calcularPedido() {
     let precioFinal = 0;
     for (let i = 0; i < sessionStorage.length; i++) {
@@ -90,6 +89,7 @@ function calcularPedido() {
     return precioFinal;
 }
 
+/*Una vez calculado el Presupuesto armo el Modal y lo muestro en Pantalla*/ 
 function armarModal(){
     let modalpack4 = $("#modalPack4");
     let precio = document.createElement("h3");
@@ -104,6 +104,7 @@ function armarModal(){
     modalpack4.modal("show");
 }
 
+/*Agrego contenido el Body del Pack del Pedido*/ 
 function agregarAlBody(valor,texto){
     let p = document.createElement("p");
     p.textContent = valor + " " + texto;

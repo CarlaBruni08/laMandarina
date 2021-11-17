@@ -2,6 +2,7 @@ let formulario = document.getElementById("formulario");
 formulario.onsubmit = enviarContacto;
 
 function enviarContacto(e){
+     /*Envia Correo Electronico al Cliente*/ 
      e.preventDefault();
      let nombre = document.getElementById("nombreContacto");
      let email = document.getElementById("emailContacto");
@@ -12,10 +13,12 @@ function enviarContacto(e){
 }
 
 $(document).ready(function(){
+     /*Cuando elijo un Pais, recargo Provincias*/ 
      $("#pais").on("change",function(){
           $("#provincia").trigger("change");
      })
 
+     /*Cuando elijo una Provincia, recargo Ciudades*/ 
      $("#provincia").on("change",function(){
           $(this).html("");
           let pais = $("#pais").val();

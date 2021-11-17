@@ -1,3 +1,4 @@
+/*Animaciones sobre las fotos de la Galeria*/ 
 let fotos = document.getElementsByClassName("galeria-container__img");
 for(const foto of fotos){
     foto.addEventListener("mouseover",agrandar);
