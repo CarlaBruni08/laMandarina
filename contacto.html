@@ -57,6 +57,10 @@
   <div class="contenedor">
     <div>
       <section class="imagenFondo contacto">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertaContacto" style="display: none; padding-right: 1rem!important;">
+          <strong id="textoContacto"></strong>
+          &nbsp;&nbsp;<button type="button" class="btn btn-danger" data-dismiss="modal" onclick="$('#alertaContacto').hide()">X</button>
+        </div>         
         <div class="container">
           <form class="contacto__formulario" id="formulario" align="center" action="asd" method="POST" enctype="multipart/form-data">
             <div class="row">

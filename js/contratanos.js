@@ -1,9 +1,52 @@
-function armarPedido() {
-    pedirDato("Ingrese Cantidad Flyers", "flyers");
-    pedirDato("Ingrese Cantidad Fotos", "fotos");
-    pedirDato("Ingrese Cantidad RetoquesFX", "retoquesfx");
-    pedirDato("Ingrese Cantidad Videos Animados", "videos");
-    pedirDato("Ingrese Cantidad Videos con Efectos", "videosEfectos");
+function armarPedido(){
+    $("input").each(function(){
+        $(this).val(null);
+    });
+    let modalPedido = $("#modalPedido");
+    modalPedido.modal("show");
+}
+
+function validarPedido(){
+    if(validarDatos() == true){
+        if(window.confirm("confirme que desea enviar el pedido?")){
+            generarPedido();
+        }
+    }
+}
+
+function validarDatos(){
+    $("#alertaPack").hide();
+    let resultado = true;
+    $("input").each(function(){
+        if($(this).val() == ''){
+            $("#textoPack").html("Faltan Datos para Cargar");
+            $("#alertaPack").show();
+            resultado = false;
+            return;
+        }
+    });
+    if(!resultado){
+        return resultado;
+    }
+    $("input").each(function(){
+        if(!($.isNumeric($(this).val()))){
+            $("#textoPack").html("Los Datos deben ser Numericos");
+            $("#alertaPack").show();
+            resultado = false;
+            return;
+        }
+    });
+    return resultado;
+}
+
+function generarPedido(){
+    let modalPedido = $("#modalPedido");
+    modalPedido.modal("hide");
+    sessionStorage.setItem("flyers", $("#flyers").val());
+    sessionStorage.setItem("fotos", $("#fotos").val());
+    sessionStorage.setItem("retoquesfx", $("#retoquesfx").val());
+    sessionStorage.setItem("videos", $("#videos").val());
+    sessionStorage.setItem("videosEfectos", $("#videosEfectos").val());    
     armarModal();
 }
 
@@ -49,8 +92,6 @@ function calcularPedido() {
 
 function armarModal(){
     let modalpack4 = $("#modalPack4");
-    //let modalpack4Body = document.getElementById("modalPack4Body");
-    
     let precio = document.createElement("h3");
     precio.textContent = "$"+calcularPedido();
     $("#modalPack4Body").html('');

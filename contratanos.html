@@ -173,7 +173,11 @@
                 <!-- FIN MODAL PACK 1-->
                 <!--MODAL PEDIDO-->
                 <div class="modal modalContratanos" id="modalPedido">
+                   
                     <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert" id="alertaPack" style="display: none; padding-right: 1rem!important;">
+                            <strong id="textoPack"></strong>
+                          </div>                         
                         <div class="modal-content">
                             <!-- Modal Header -->
                             <div class="modal-header">
@@ -232,8 +236,8 @@
                             <!-- Modal footer -->
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" onclick="$('#modalPedido').modal('hide')"
-                                data-dismiss="modal">Close</button>                                
-                                <button type="button" class="btn btn-danger" onclick="generarPedido()"
+                                data-dismiss="modal">X</button>                                
+                                <button type="button" class="btn btn-danger" onclick="validarPedido()"
                                     data-dismiss="modal">Calcular Pack</button>
                             </div>
 
@@ -258,7 +262,7 @@
                             <!-- Modal footer -->
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" onclick="$('#modalPack4').modal('hide')"
-                                    data-dismiss="modal">Close</button>
+                                    data-dismiss="modal">X</button>
                             </div>
 
                         </div>
